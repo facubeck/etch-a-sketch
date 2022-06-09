@@ -1,17 +1,34 @@
 // Etch a Sketch
 
-const container = document.querySelector('.container');
-document.body.appendChild(container);
+function crearBoard(size) {
+    let board = document.querySelector('.board');
+    let squares = board.querySelectorAll('div');
+    squares.forEach(div => div.remove());
+    board.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+    board.style.gridTemplateRows = `repeat(${size}, 1fr)`;
 
-let newDiv;
+    // bucle que crea los divs
+    let amount = size * size;
 
-// agregar divs al container
-function agregarDivsDOM (){
-    let cantidadDivs = 16 * 16;
-    for(let i = 0; i < cantidadDivs; i++){
-        newDiv = document.createElement('div');
-        container.appendChild(newDiv);
+    for (let i = 0; i < amount; i++) {
+        let square = document.createElement('div');
+        // cambiar de color
+        square.addEventListener('mouseover', colorSquare)
+        square.style.backgroundColor = 'black';
+        board.appendChild(square)
     }
 }
 
-agregarDivsDOM();
+crearBoard(16);
+
+
+function changeSize(input) {
+    if (input >= 2 || input <= 100) {
+        crearBoard(input);
+    }
+    else { alert('too much squares!') }
+}
+
+function colorSquare(){
+    this.style.backgroundColor = `hsl(${Math.random() *360}, 100%, 50%)`
+}
