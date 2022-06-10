@@ -9,15 +9,30 @@
   </head>
   <body>
     <div class="flex-containte">
-      <div class="title"><h1>SketchPad</h1></div>
+      <div class="title">
+          <h1>
+              <span style="color: #023e8a">S</span>
+              <span style="color: #fca311">k</span>
+              <span style="color: #8ac926">e</span>
+              <span style="color: #d90429">t</span>
+              <span style="color: #003049">c</span>
+              <span style="color: #001219">h - </span>
+              
+
+              <span style="color: #e36414">P</span>
+              <span style="color: #023e8a">a</span>
+              <span style="color: #000">d</span>
+          </h1>
+      </div>
 
       <div class="content">
         <div class="board"></div>
 
-        <div>
+        <div class="input">
+            <label for="input"><h2>Choose the size <br> of the board</h2></label>
           <input
             type="text"
-            placeholder="Size of the board"
+            placeholder="Input size"
             value="16"
             onchange="changeSize(this.value)"
           />

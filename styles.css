@@ -1,5 +1,60 @@
+body {
+  background-color: #edf6f9;
+}
+
+.title {
+  text-align: center;
+  font-size: 20px;
+  letter-spacing: 4px;
+  color: #001219;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .board {
   width: 500px;
   height: 500px;
   display: grid;
+  border: solid 5px black;
+}
+
+.input{
+    position: absolute;
+    right: 0;
+    margin-right: 130px;
+}
+.input > input{
+    height: 35px;
+    width: 200px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bolder;
+    border: solid 1px black;
+    margin-bottom: 5px;
+}
+.input > button {
+    display: block;
+    background: #023e8a;
+    border: solid 1px black;
+    width: 206px;
+    height: 40px;
+    font-size: 100%;
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: white;
+}
+.input > button:hover{
+    background: #013272;
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 300ms;
+}
+.input > label {
+    text-transform: upper;
+    font-size: 20px;
+    text-align: center;
 }

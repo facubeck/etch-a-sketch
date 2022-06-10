@@ -14,12 +14,12 @@ function crearBoard(size) {
         let square = document.createElement('div');
         // cambiar de color
         square.addEventListener('mouseover', colorSquare)
-        square.style.backgroundColor = 'black';
+        square.style.backgroundColor = '#0b090a';
         board.appendChild(square)
     }
 }
 
-crearBoard(16);
+crearBoard(32);
 
 
 function changeSize(input) {
